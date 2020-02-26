@@ -1,0 +1,18 @@
+module.exports={
+    entry:'./Assignment/app.ts',
+    devtool:'inline-source-map',
+    resolve:{
+        extension:['.tsx','ts','.js']
+    },
+    output:{
+        filename:'bundle.js'
+    },
+    devserver:{
+        inline:false
+    },
+    module:{
+        rules:[
+            {test:/\.ts$/,exclude:/node_modules/,loader:'ts-loader'}
+        ]
+    }
+}
